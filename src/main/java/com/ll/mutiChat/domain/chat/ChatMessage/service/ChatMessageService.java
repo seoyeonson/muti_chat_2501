@@ -17,6 +17,8 @@ import java.util.Optional;
 public class ChatMessageService {
     private final ChatMessageRepository chatMessageRepository;
 
+    // afterId 이후 채팅 조회
+    // IdAfter : id가 주어진 값보다 큰 데이터를 찾는다.
     public List<ChatMessage> findByChatRoomIdAndIdAfter(long roomId, long afterId){
         return chatMessageRepository.findByChatRoomIdAndIdAfter(roomId, afterId);
     };
